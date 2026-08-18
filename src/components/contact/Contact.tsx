@@ -1,9 +1,7 @@
 import * as React from 'react';
 import { m } from 'framer-motion';
 import { SOCIAL_LINKS } from '@/data/portfolio';
-import { WashiTape } from '@/components/ui/WashiTape';
-import { SectionHeading } from '@/components/ui/SectionHeading';
-import { SocialIcon, socialHref } from '@/components/ui/SocialIcon';
+import { WashiTape, SectionHeading, SocialIcon, socialHref, PaperCard } from '@/components/ui';
 import { cn } from '@/lib/utils';
 
 export function Contact() {
@@ -29,7 +27,7 @@ export function Contact() {
               color="mauve"
               style={{ position: 'absolute', top: -8, right: 16 }}
             />
-            <div className="bg-white border border-[#D7DAE6] shadow-sm p-5">
+            <PaperCard accent="plain" className="shadow-sm p-5">
               <div className="text-[#6B7080] mb-4 text-xs" style={{ fontFamily: "'JetBrains Mono', monospace" }}>
                 $ links --list
               </div>
@@ -63,7 +61,7 @@ export function Contact() {
                   </a>
                 ))}
               </div>
-            </div>
+            </PaperCard>
           </div>
         </div>
 

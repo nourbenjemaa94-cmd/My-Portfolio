@@ -1,10 +1,7 @@
 import { m } from 'framer-motion';
 import { Code, Github } from 'lucide-react';
 import { PROJECTS, SECTION_CLASS } from '@/data/portfolio';
-import { Section } from '@/components/ui/Section';
-import { SectionHeading } from '@/components/ui/SectionHeading';
-import { TagPill } from '@/components/ui/TagPill';
-import { WashiTape } from '@/components/ui/WashiTape';
+import { Section, SectionHeading, TagPill, WashiTape } from '@/components/ui';
 import { cn } from '@/lib/utils';
 
 export function Projects() {

@@ -1,11 +1,6 @@
 import * as React from 'react';
 import { AnimatePresence } from 'framer-motion';
-import { PAPER_BG } from '@/data/portfolio';
-import { Navbar } from '@/components/layout/Navbar';
-import { Footer } from '@/components/layout/Footer';
-import { PageIntro } from '@/components/layout/PageIntro';
-import { CursorTrail } from '@/components/layout/CursorTrail';
-import { ScrollProgress } from '@/components/layout/ScrollProgress';
+import { SiteLayout, PageIntro } from '@/components/layout';
 import { Hero } from '@/components/hero/Hero';
 import { About } from '@/components/about/About';
 import { Education } from '@/components/education/Education';
@@ -20,24 +15,21 @@ export function Portfolio() {
   const [introVisible, setIntroVisible] = React.useState(!prefersReducedMotion);
 
   return (
-    <div className="min-h-screen bg-[#F4F5FA]" style={{ backgroundImage: PAPER_BG }}>
-      <AnimatePresence>
-        {introVisible && <PageIntro onDone={() => setIntroVisible(false)} />}
-      </AnimatePresence>
-      <CursorTrail />
-      <ScrollProgress />
-      <Navbar />
-      <main>
-        <Hero />
-        <About />
-        <Education />
-        <TechStack />
-        <Projects />
-        <Experience />
-        <Contact />
-      </main>
-      <Footer />
-    </div>
+    <SiteLayout
+      overlay={
+        <AnimatePresence>
+          {introVisible && <PageIntro onDone={() => setIntroVisible(false)} />}
+        </AnimatePresence>
+      }
+    >
+      <Hero />
+      <About />
+      <Education />
+      <TechStack />
+      <Projects />
+      <Experience />
+      <Contact />
+    </SiteLayout>
   );
 }
 

@@ -1,7 +1,7 @@
-import { m } from 'framer-motion';
 import { ArrowRight, Download, Star } from 'lucide-react';
-import { HERO_STATS } from '@/data/portfolio';
-import { WashiTape } from '@/components/ui/WashiTape';
+import { m } from 'framer-motion';
+import { HERO_STATS, POLAROIDS } from '@/data/portfolio';
+import { WashiTape, Polaroid, Button } from '@/components/ui';
 import { TypewriterRole } from '@/components/hero/TypewriterRole';
 
 export function Hero() {
@@ -29,25 +29,12 @@ export function Hero() {
           in software development at ISET Rades.
         </p>
         <div className="mt-8 flex flex-wrap gap-3">
-          <m.a
-            href="#projects"
-            whileHover={{ scale: 1.04 }}
-            whileTap={{ scale: 0.97 }}
-            className="bg-[#7A2A50] text-white px-6 py-2.5 rounded-full flex items-center gap-2 text-sm font-medium shadow-lg shadow-[#7A2A50]/20 hover:bg-[#692B56] transition-all"
-            style={{ fontFamily: "'Inter', sans-serif" }}
-          >
+          <Button href="#projects">
             View my work <ArrowRight size={15} />
-          </m.a>
-          <m.a
-            href="/Nour-BENJEMAA-Resume.pdf"
-            download="Nour-BENJEMAA-Resume.pdf"
-            whileHover={{ scale: 1.04 }}
-            whileTap={{ scale: 0.97 }}
-            className="border border-[#D7DAE6] text-[#181A26] px-6 py-2.5 rounded-full flex items-center gap-2 text-sm font-medium hover:bg-white transition-all"
-            style={{ fontFamily: "'Inter', sans-serif" }}
-          >
+          </Button>
+          <Button href="/Nour-BENJEMAA-Resume.pdf" download="Nour-BENJEMAA-Resume.pdf" variant="outline">
             Download CV <Download size={15} />
-          </m.a>
+          </Button>
         </div>
         <div className="mt-5 flex flex-wrap gap-2">
           {HERO_STATS.map(s => (
@@ -85,46 +72,18 @@ export function Hero() {
           <pre className="text-[#181A26] text-[9px] leading-relaxed whitespace-pre-wrap">{`def me():\n  return {\n    "name": "Nour Ben Jemaa",\n    "status": "building things ✨"\n  }`}</pre>
         </m.div>
 
-        <m.div
-          initial={{ rotate: 6, opacity: 0, filter: 'saturate(0) brightness(0.5)' }}
-          animate={{ rotate: 3, opacity: 1, filter: 'saturate(1) brightness(1)' }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="bg-white shadow-xl flex flex-col"
-          style={{
-            position: 'absolute',
-            inset: 16,
-            border: '12px solid #ffffff',
-            boxShadow: '0 12px 48px rgba(0,0,0,0.22), 0 4px 16px rgba(0,0,0,0.12)',
-          }}
-        >
-          <WashiTape
-            className="h-4 w-12 rotate-[-5deg] rounded-sm"
-            color="blue"
-            style={{ position: 'absolute', top: -4, left: '50%', transform: 'translateX(-50%)' }}
-          />
-          <div className="flex-grow overflow-hidden">
-            <img
-              src="/nour.png"
-              alt="Nour Ben Jemaa"
-              width={800}
-              height={547}
-              fetchPriority="high"
-              decoding="async"
-              style={{
-                width: '100%',
-                height: '100%',
-                objectFit: 'cover',
-                objectPosition: 'center top',
-                display: 'block',
-              }}
-            />
-          </div>
-          <div className="h-10 flex items-center justify-center bg-white flex-shrink-0">
-            <span className="text-[9px] text-[#6B7080]" style={{ fontFamily: "'JetBrains Mono', monospace" }}>
-              git commit -m "hi, i'm Nour"
-            </span>
-          </div>
-        </m.div>
+        <Polaroid
+          src={POLAROIDS.hero.src}
+          caption={POLAROIDS.hero.caption}
+          width={POLAROIDS.hero.width}
+          height={POLAROIDS.hero.height}
+          reveal="mount"
+          loading="eager"
+          fetchPriority="high"
+          className="absolute inset-4 border-[12px] shadow-[0_12px_48px_rgba(0,0,0,0.22),0_4px_16px_rgba(0,0,0,0.12)]"
+          imageWrapClassName="flex-grow"
+          captionClassName="h-10 text-[9px]"
+        />
 
         <m.div
           whileHover={{ rotate: [0, -10, 10, 0], scale: 1.15 }}

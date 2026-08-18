@@ -122,6 +122,27 @@ export const ABOUT_PILLS: AboutPill[] = [
 
 export const HERO_STATS = [{ label: '★ 24 repos' }, { label: '⑂ 312 contributions' }, { label: '📌 FlowerShop' }];
 
+export const POLAROIDS = {
+  hero: {
+    src: '/nour.png',
+    caption: 'git commit -m "hi, i\'m Nour"',
+    width: 800,
+    height: 547,
+  },
+  about: {
+    src: '/nounou.jpeg',
+    caption: 'when the build passed ✓',
+    width: 640,
+    height: 480,
+  },
+  education: {
+    src: '/nou2.jpeg',
+    caption: 'when the lecture compiled ✓',
+    width: 640,
+    height: 800,
+  },
+} as const;
+
 export const SOCIAL_LINKS: SocialLink[] = [
   { label: 'github', url: 'github.com/nourbenjemaa94-cmd', icon: 'github' },
   {

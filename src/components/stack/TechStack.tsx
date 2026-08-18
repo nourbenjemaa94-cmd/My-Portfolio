@@ -1,9 +1,7 @@
 import * as React from 'react';
 import { AnimatePresence, m } from 'framer-motion';
 import { SECTION_CLASS, SKILLS, TECH_CARDS, TECH_FILTERS } from '@/data/portfolio';
-import { Section } from '@/components/ui/Section';
-import { SectionHeading } from '@/components/ui/SectionHeading';
-import { WashiTape } from '@/components/ui/WashiTape';
+import { Section, SectionHeading, WashiTape, PaperCard } from '@/components/ui';
 import { cn } from '@/lib/utils';
 
 export function TechStack() {
@@ -76,7 +74,7 @@ export function TechStack() {
           color="blue"
           style={{ position: 'absolute', top: -8, right: 16 }}
         />
-        <div className="bg-white shadow-lg p-6 relative border-l-4 border-[#7A2A50]">
+        <PaperCard className="shadow-lg p-6">
           <div className="text-[#6B7080] mb-4 text-xs" style={{ fontFamily: "'JetBrains Mono', monospace" }}>
             // skill_levels.txt
           </div>
@@ -108,7 +106,7 @@ export function TechStack() {
               </div>
             ))}
           </div>
-        </div>
+        </PaperCard>
       </div>
     </Section>
   );
