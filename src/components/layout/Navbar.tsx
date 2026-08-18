@@ -7,10 +7,14 @@ export function Navbar() {
       aria-label="Primary"
       className="sticky top-0 z-40 bg-[#F4F5FA]/80 backdrop-blur-md border-b border-[#D7DAE6] px-6 h-14 flex items-center justify-between shadow-sm"
     >
-      <div className="flex items-center gap-1" style={{ fontFamily: "'JetBrains Mono', monospace" }}>
+      <a
+        href="#hero"
+        className="flex items-center gap-1 hover:opacity-80 transition-opacity"
+        style={{ fontFamily: "'JetBrains Mono', monospace" }}
+      >
         <span className="text-[#2F6FB0] text-base">~/nour</span>
         <span className="cursor-blink w-0.5 h-4 bg-[#7A2A50] inline-block ml-0.5" />
-      </div>
+      </a>
       <div className="hidden md:flex items-center gap-3">
         {NAV_ITEMS.map(item => (
           <a

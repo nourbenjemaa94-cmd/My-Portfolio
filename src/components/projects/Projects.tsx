@@ -33,7 +33,7 @@ export function Projects() {
             style={{ position: 'absolute', top: -4, left: 16 }}
           />
           <div className="flex flex-col md:flex-row">
-            <div className="md:w-2/5 flex-shrink-0 bg-[#F4F5FA] flex items-center justify-center p-4">
+            <div className="w-full md:w-52 flex-shrink-0 bg-[#F4F5FA] flex items-center justify-center p-3">
               <img
                 src="/e-fleur2.jpg"
                 alt="FlowerShop app screenshot"
@@ -41,10 +41,10 @@ export function Projects() {
                 height={800}
                 loading="lazy"
                 decoding="async"
-                className="max-h-[420px] w-auto max-w-full object-contain"
+                className="max-h-[420px] w-full h-full object-contain"
               />
             </div>
-            <div className="p-6 flex flex-col justify-center">
+            <div className="p-6 md:pl-5 flex flex-col justify-center flex-1 min-w-0">
               <div className="flex items-start justify-between mb-2 gap-2">
                 <h3 className="text-xl font-semibold text-[#181A26]" style={{ fontFamily: "'Playfair Display', serif" }}>
                   {featured.title}

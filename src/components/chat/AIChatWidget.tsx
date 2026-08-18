@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { m, AnimatePresence } from 'framer-motion';
 import { X, ArrowRight } from 'lucide-react';
+import { getReply } from '@/lib/chatReplies';
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -22,69 +23,13 @@ const SUGGESTION_CHIPS = [{
   id: 'chip-work',
   label: 'Are you open to work?'
 }, {
-  id: 'chip-learning',
-  label: 'What are you learning right now?'
+  id: 'chip-webdirect',
+  label: 'What do you do at WebDirect?'
 }];
 
-// ─── Hardcoded reply logic ────────────────────────────────────────────────────
-
-function getReply(input: string): string {
-  const q = input.toLowerCase();
-  if (q.includes('stack') || q.includes('tech')) {
-    return 'Python and JavaScript are my daily drivers — React on the front, Node.js on the back, PostgreSQL for data. I\'ve also been getting into Docker and Linux tooling lately.';
-  }
-  if (q.includes('project')) {
-    return "FlowerShop — a Flutter e-commerce app I built during my internship at La Poste Tunisienne. Browse, search, and buy flowers across Android, iOS, Web, and Windows, with Firebase Auth, Firestore, and Storage.";
-  }
-  if (q.includes('work') || q.includes('hire') || q.includes('open')) {
-    return "Yes! I'm actively looking for internships and collaborations. Reach me at nourbenjemaa94@gmail.com.";
-  }
-  if (q.includes('learn') || q.includes('studying')) {
-    return "Right now I'm deep in distributed systems and dabbling in Rust. Slowly but surely!";
-  }
-  if (q.includes('github')) {
-    return 'Find my projects at github.com/nourbenjemaa94-cmd.';
-  }
-  if (q.includes('contact') || q.includes('email') || q.includes('linkedin')) {
-    return 'Email: nourbenjemaa94@gmail.com or LinkedIn: linkedin.com/in/nour-ben-jemaa.';
-  }
-  return "Great question! Feel free to browse the portfolio — there's a lot to explore.";
-}
-
-/*
- * ─── LLM API SCAFFOLD (replace getReply() with this when ready) ───────────────
- *
- * const SYSTEM_PROMPT = `
- *   You are mini-Nour, a friendly AI assistant embedded in Nour Ben Jemaa's portfolio.
- *   Nour is a Computer Science student based in Tunis, Tunisia, Year 3.
- *   She is a Full-Stack developer skilled in Python, JavaScript, React, Node.js, PostgreSQL, Docker, Linux.
- *   Her featured project is FlowerShop — a Flutter e-commerce app built during her internship at La Poste Tunisienne.
- *   She is actively seeking internships and collaborations.
- *   Contact: nourbenjemaa94@gmail.com | GitHub: github.com/nourbenjemaa94-cmd | LinkedIn: linkedin.com/in/nour-ben-jemaa
- *   Keep answers short, warm, and first-person casual.
- * `;
- *
- * async function getLLMReply(messages: { role: string; content: string }[]): Promise<string> {
- *   // OpenAI example:
- *   // const res = await fetch('https://api.openai.com/v1/chat/completions', {
- *   //   method: 'POST',
- *   //   headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${API_KEY}` },
- *   //   body: JSON.stringify({ model: 'gpt-4o-mini', messages: [{ role: 'system', content: SYSTEM_PROMPT }, ...messages] }),
- *   // });
- *   // const data = await res.json();
- *   // return data.choices[0].message.content;
- *
- *   // Groq example:
- *   // const res = await fetch('https://api.groq.com/openai/v1/chat/completions', {
- *   //   method: 'POST',
- *   //   headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${GROQ_API_KEY}` },
- *   //   body: JSON.stringify({ model: 'llama3-8b-8192', messages: [{ role: 'system', content: SYSTEM_PROMPT }, ...messages] }),
- *   // });
- *   // const data = await res.json();
- *   // return data.choices[0].message.content;
- *   return '';
- * }
- */
+// Replies come from src/lib/chatReplies.ts and read live site data
+// (stack, projects, experience, education). Edit that file — or the
+// arrays in src/data/portfolio.ts — to "train" mini-Nour.
 
 // ─── Avatar circle ────────────────────────────────────────────────────────────
 
@@ -538,7 +483,7 @@ export const AIChatWidget = () => {
       scale: 0.94
     }}>
         
-        <AvatarCircle size={52} />
+        <AvatarCircle size={64} />
       </m.button>
     </div>;
 };

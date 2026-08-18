@@ -38,10 +38,12 @@ export const EXPERIENCES: Experience[] = [
     role: 'Developer',
     company: 'WebDirect.nl',
     bullets: [
-      'Remote developer role, moving from part-time (Mar → Jun 2026) to full-time (Jun 2026 → present)',
-      'Working across full-stack development with TypeScript',
+      'Designed and shipped production-ready client websites, owning the full lifecycle from design to deployment',
+      'Built pixel-perfect Next.js 14 apps with TypeScript and Tailwind CSS from Figma',
+      'Integrated a branded Sanity Studio so non-technical clients can edit text and images in real time',
+      'Set up GitHub → Vercel CI/CD, plus ISR, draft mode, webhook cache revalidation, and a Studio change-history log',
     ],
-    tags: ['full-stack', 'typescript', 'remote'],
+    tags: ['next.js', 'typescript', 'tailwind', 'sanity', 'vercel'],
   },
   {
     id: 'exp1',
@@ -70,7 +72,7 @@ export const EDUCATION: EducationEntry[] = [
     tapeClassName: 'h-4 w-14 rotate-[-5deg] rounded-sm',
   },
   {
-    school: 'High School, Tunisia',
+    school: 'High School, Ben Arous',
     degree: 'Baccalauréat in Mathematics',
     dates: '2025',
     tags: ['Mathematics', 'Sciences'],
@@ -96,23 +98,26 @@ export const TECH_CARDS: TechCard[] = [
   { name: 'TypeScript', emoji: '📘', category: 'Languages' },
   { name: 'Dart', emoji: '🎯', category: 'Languages' },
   { name: 'Python', emoji: '🐍', category: 'Languages' },
+  { name: 'C / C++', emoji: '⚙️', category: 'Languages' },
+  { name: 'Tailwind CSS', emoji: '🌬️', category: 'Languages' },
   { name: 'React', emoji: '⚛', category: 'Frameworks' },
   { name: 'Next.js', emoji: '▲', category: 'Frameworks' },
   { name: 'Flutter', emoji: '🦋', category: 'Frameworks' },
   { name: 'PostgreSQL', emoji: '🐘', category: 'Databases' },
   { name: 'Git / GitHub', emoji: '🌿', category: 'Tools' },
   { name: 'Sanity CMS', emoji: '📝', category: 'Tools' },
+  { name: 'MATLAB', emoji: '📊', category: 'Tools' },
 ];
 
 export const TECH_FILTERS = ['All', 'Languages', 'Frameworks', 'Databases', 'Tools'] as const;
 
 export const ABOUT_PILLS: AboutPill[] = [
   { label: 'problem-solver', variant: 'mauve' },
-  { label: 'open-source curious', variant: 'blue' },
-  { label: 'coffee-dependent', variant: 'mauve' },
-  { label: 'IEEE member', variant: 'blue' },
-  { label: 'night-owl coder', variant: 'mauve' },
-  { label: 'documentation stan', variant: 'blue' },
+  { label: 'full-stack', variant: 'blue' },
+  { label: 'AI/ML curious', variant: 'mauve' },
+  { label: 'IEEE volunteer', variant: 'blue' },
+  { label: 'hackathons', variant: 'mauve' },
+  { label: 'learn by shipping', variant: 'blue' },
 ];
 
 export const HERO_STATS = [{ label: '★ 24 repos' }, { label: '⑂ 312 contributions' }, { label: '📌 FlowerShop' }];

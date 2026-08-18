@@ -25,8 +25,8 @@ export function Hero() {
           className="mt-6 text-[#6B7080] text-base leading-[1.75] max-w-md"
           style={{ fontFamily: "'Inter', sans-serif" }}
         >
-          Building clean things on the internet. Obsessed with how systems work. Currently studying CS at
-          State University.
+          Building clean things on the internet. Obsessed with how systems work. Currently specializing
+          in software development at ISET Rades.
         </p>
         <div className="mt-8 flex flex-wrap gap-3">
           <m.a
@@ -38,14 +38,16 @@ export function Hero() {
           >
             View my work <ArrowRight size={15} />
           </m.a>
-          <m.button
+          <m.a
+            href="/Nour-BENJEMAA-Resume.pdf"
+            download="Nour-BENJEMAA-Resume.pdf"
             whileHover={{ scale: 1.04 }}
             whileTap={{ scale: 0.97 }}
             className="border border-[#D7DAE6] text-[#181A26] px-6 py-2.5 rounded-full flex items-center gap-2 text-sm font-medium hover:bg-white transition-all"
             style={{ fontFamily: "'Inter', sans-serif" }}
           >
             Download CV <Download size={15} />
-          </m.button>
+          </m.a>
         </div>
         <div className="mt-5 flex flex-wrap gap-2">
           {HERO_STATS.map(s => (
@@ -102,7 +104,7 @@ export function Hero() {
           />
           <div className="flex-grow overflow-hidden">
             <img
-              src="/nour.webp"
+              src="/nour.png"
               alt="Nour Ben Jemaa"
               width={800}
               height={547}
