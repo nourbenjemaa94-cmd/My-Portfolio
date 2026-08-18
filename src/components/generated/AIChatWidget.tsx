@@ -34,7 +34,7 @@ function getReply(input: string): string {
     return 'Python and JavaScript are my daily drivers — React on the front, Node.js on the back, PostgreSQL for data. I\'ve also been getting into Docker and Linux tooling lately.';
   }
   if (q.includes('project')) {
-    return "DevNotes is my favourite thing I've built — a markdown note-taker with fuzzy search, tagging, and a CLI sync tool. Shipped it, then actually used it every day.";
+    return "FlowerShop — a Flutter e-commerce app I built during my internship at La Poste Tunisienne. Browse, search, and buy flowers across Android, iOS, Web, and Windows, with Firebase Auth, Firestore, and Storage.";
   }
   if (q.includes('work') || q.includes('hire') || q.includes('open')) {
     return "Yes! I'm actively looking for internships and collaborations. Reach me at nourbenjemaa94@gmail.com.";
@@ -58,7 +58,7 @@ function getReply(input: string): string {
  *   You are mini-Nour, a friendly AI assistant embedded in Nour Ben Jemaa's portfolio.
  *   Nour is a Computer Science student based in Tunis, Tunisia, Year 3.
  *   She is a Full-Stack developer skilled in Python, JavaScript, React, Node.js, PostgreSQL, Docker, Linux.
- *   Her featured project is DevNotes — a markdown note-taker with fuzzy search, tagging, and a CLI sync tool.
+ *   Her featured project is FlowerShop — a Flutter e-commerce app built during her internship at La Poste Tunisienne.
  *   She is actively seeking internships and collaborations.
  *   Contact: nourbenjemaa94@gmail.com | GitHub: github.com/nourbenjemaa94-cmd | LinkedIn: linkedin.com/in/nour-ben-jemaa
  *   Keep answers short, warm, and first-person casual.

@@ -32,115 +32,102 @@ interface Experience {
 
 const ROLES = ['IT Student_', 'Full-Stack Dev_', 'Problem Solver_', 'Open Source Nerd_'];
 const PROJECTS: Project[] = [{
-  id: 'devnotes',
-  title: 'DevNotes',
-  description: 'A markdown-first note-taking app with tagging, search, and CLI sync. Built for developers who live in the terminal.',
-  tags: ['React', 'Node.js', 'SQLite', 'CLI'],
+  id: 'flowershop',
+  title: 'FlowerShop — Flutter E-Commerce',
+  description: 'A cross-platform mobile e-commerce app developed during my internship at La Poste Tunisienne. Customers can browse, search, and purchase flowers with a smooth, responsive UI. Built with Flutter & Dart for Android, iOS, Web, and Windows, with Firebase Authentication, Cloud Firestore for real-time product management, and Firebase Storage for media. Key highlights: clean architecture, role-based access, real-time inventory updates, and a full cart and checkout flow.',
+  tags: ['Flutter', 'Dart', 'Firebase Auth', 'Firestore', 'Firebase Storage'],
   links: [{
-    label: 'Live demo →',
-    url: '#',
-    icon: 'demo'
-  }, {
-    label: '{ } Source',
-    url: '#',
+    label: 'View on GitHub →',
+    url: 'https://github.com/nourbenjemaa94-cmd/Internship-Project',
     icon: 'source'
   }],
   featured: true
-}, {
-  id: 'portfolio-api',
-  title: 'Portfolio API',
-  description: 'A REST API for developer portfolios with auto-generated pages and analytics.',
-  tags: ['Python', 'FastAPI', 'PostgreSQL'],
-  links: [{
-    label: '{ } Source',
-    url: '#',
-    icon: 'source'
-  }],
-  isWip: true
-}, {
-  id: 'termui',
-  title: 'TermUI',
-  description: 'A Go CLI component library for building beautiful terminal UIs without the pain.',
-  tags: ['Go', 'CLI', 'TUI'],
-  links: [{
-    label: '{ } Source',
-    url: '#',
-    icon: 'source'
-  }]
 }];
 const EXPERIENCES: Experience[] = [{
+  id: 'exp-webdirect',
+  hash: 'f7e8d9c',
+  date: 'Mar 2026 → present',
+  role: 'Developer',
+  company: 'WebDirect.nl',
+  bullets: ['Remote developer role, moving from part-time (Mar → Jun 2026) to full-time (Jun 2026 → present)', 'Working across full-stack development with TypeScript'],
+  tags: ['full-stack', 'typescript', 'remote']
+}, {
   id: 'exp1',
   hash: 'a1b2c3d',
-  date: 'Jun 2024 → present',
-  role: 'Full-Stack Developer Intern',
-  company: 'TechCorp',
-  bullets: ['Built REST APIs serving 10k+ daily requests', 'Migrated legacy dashboard to React 18', 'Reduced load time by 40% via caching'],
-  tags: ['react', 'node.js', 'postgresql']
-}, {
-  id: 'exp2',
-  hash: 'e4f5a6b',
-  date: 'Jan 2024 → May 2024',
-  role: 'Open Source Contributor',
-  company: 'DevTools OSS',
-  bullets: ['Merged 8 PRs to a 2k-star CLI toolkit', 'Improved docs and testing coverage'],
-  tags: ['go', 'cli', 'open-source']
-}, {
-  id: 'exp3',
-  hash: '9c8d7e6',
-  date: 'Sep 2023 → Dec 2023',
-  role: 'Freelance Web Developer',
-  company: 'Freelance',
-  bullets: ['Delivered 5 client websites on time', 'Optimized SEO and accessibility'],
-  tags: ['next.js', 'tailwind', 'freelance']
+  date: 'Jan 2026',
+  role: 'Mobile Developer Intern',
+  company: 'La Poste Tunisienne',
+  bullets: ['Built FlowerShop, a cross-platform e-commerce app in Flutter & Dart for Android, iOS, Web, and Windows', 'Integrated Firebase Authentication, Cloud Firestore for real-time product management, and Firebase Storage for media', 'Shipped clean architecture, role-based access, real-time inventory updates, and a full cart and checkout flow'],
+  tags: ['flutter', 'dart', 'firebase']
 }];
 const SKILLS = [{
-  name: 'Python',
-  level: 80
-}, {
   name: 'JavaScript',
   level: 90
 }, {
-  name: 'React / Next',
+  name: 'Python',
+  level: 80
+}, {
+  name: 'React / Next.js',
   level: 70
 }, {
-  name: 'SQL',
-  level: 60
+  name: 'Flutter / Dart',
+  level: 65
 }, {
-  name: 'Linux / CLI',
-  level: 85
+  name: 'PostgreSQL',
+  level: 60
 }];
 const TECH_CARDS = [{
-  name: 'Python',
-  emoji: '🐍',
+  name: 'HTML',
+  emoji: '📄',
+  category: 'Languages'
+}, {
+  name: 'CSS',
+  emoji: '🎨',
+  category: 'Languages'
+}, {
+  name: 'Java',
+  emoji: '☕',
   category: 'Languages'
 }, {
   name: 'JavaScript',
   emoji: '⚡',
   category: 'Languages'
 }, {
+  name: 'TypeScript',
+  emoji: '📘',
+  category: 'Languages'
+}, {
+  name: 'Dart',
+  emoji: '🎯',
+  category: 'Languages'
+}, {
+  name: 'Python',
+  emoji: '🐍',
+  category: 'Languages'
+}, {
   name: 'React',
   emoji: '⚛',
   category: 'Frameworks'
 }, {
-  name: 'Node.js',
-  emoji: '🟢',
+  name: 'Next.js',
+  emoji: '▲',
+  category: 'Frameworks'
+}, {
+  name: 'Flutter',
+  emoji: '🦋',
   category: 'Frameworks'
 }, {
   name: 'PostgreSQL',
   emoji: '🐘',
   category: 'Databases'
 }, {
-  name: 'Linux',
-  emoji: '🐧',
-  category: 'Tools'
-}, {
-  name: 'Git',
+  name: 'Git / GitHub',
   emoji: '🌿',
   category: 'Tools'
 }, {
-  name: 'Docker',
-  emoji: '🐳',
-  category: 'Cloud'
+  name: 'Sanity CMS',
+  emoji: '📝',
+  category: 'Tools'
 }];
 const ABOUT_PILLS = [{
   label: 'problem-solver',
@@ -166,7 +153,7 @@ const HERO_STATS = [{
 }, {
   label: '⑂ 312 contributions'
 }, {
-  label: '📌 DevNotes'
+  label: '📌 FlowerShop'
 }];
 const LINK_ROWS = [{
   label: 'github',
@@ -559,7 +546,7 @@ export const Portfolio = () => {
             transform: 'translateX(-50%)'
           } as React.CSSProperties} />
             <div className="flex-grow overflow-hidden">
-              <img src="https://storage.googleapis.com/storage.magicpath.ai/component-assets/420171969561006080/420199204300951552/bf6989da9471d6f3d3cab3d69e20b8c0af78c846f7deea1c41b45b739bdf99dc.jpg" alt="Nour Ben Jemaa outdoors" style={{
+              <img src="/nour.png" alt="Nour Ben Jemaa" style={{
               width: '100%',
               height: '100%',
               objectFit: 'cover',
@@ -575,41 +562,6 @@ export const Portfolio = () => {
                 
                 git commit -m "hi, i'm Nour"
               </span>
-            </div>
-          </motion.div>
-
-          {/* Layer 3 — name tag */}
-          <motion.div initial={{
-          y: 20,
-          opacity: 0
-        }} animate={{
-          y: 0,
-          opacity: 1,
-          rotate: -2
-        }} transition={{
-          duration: 0.7,
-          delay: 0.6
-        }} className="bg-white border border-[#D7DAE6] shadow-2xl p-3 flex flex-col justify-between" style={{
-          position: 'absolute',
-          top: '40%',
-          left: '50%',
-          transform: 'translate(-50%, -50%) rotate(-2deg)',
-          width: 160,
-          height: 100
-        }}>
-            
-            <div className="text-[8px] uppercase tracking-widest text-[#6B7080] border-b border-[#D7DAE6] pb-1" style={{
-            fontFamily: "'JetBrains Mono', monospace"
-          }}>
-              
-              Hello, my name is
-            </div>
-            <div className="text-center text-xl text-[#2F6FB0]" style={{
-            fontFamily: "'Playfair Display', serif",
-            fontStyle: 'italic'
-          }}>
-              
-              Nour Ben Jemaa
             </div>
           </motion.div>
 
@@ -728,7 +680,7 @@ export const Portfolio = () => {
           } as React.CSSProperties} />
             
             <div className="w-full h-28 overflow-hidden">
-              <img src="https://storage.googleapis.com/storage.magicpath.ai/component-assets/420171969561006080/420198614153990144/97a322dfad9c1405ae7ac5446450412b34a18e768dc6b35387ae8fb4db3ab7f4.jpg" alt="Nour Ben Jemaa" style={{
+              <img src="/nounour.png" alt="Nour Ben Jemaa" style={{
               width: '100%',
               height: '100%',
               objectFit: 'cover',
@@ -799,18 +751,25 @@ export const Portfolio = () => {
                 fontFamily: "'Playfair Display', serif"
               }}>
                   
-                  State University
+                  ISET Rades
                 </h3>
                 <span className="text-[#6B7080] text-xs" style={{
                 fontFamily: "'JetBrains Mono', monospace"
               }}>
                   
-                  2021 → 2025
+                  2025 → 2028
                 </span>
               </div>
-              <p className="text-[#7A2A50] font-medium text-sm mb-3">B.S. Computer Science</p>
+              <p className="text-[#6B7080] text-xs mb-1" style={{
+                fontFamily: "'Inter', sans-serif"
+              }}>
+                Higher Institute of Technological Studies of Rades
+              </p>
+              <p className="text-[#7A2A50] font-medium text-sm mb-3">
+                Bachelor's Degree in IT — Software Development
+              </p>
               <div className="flex flex-wrap gap-1.5">
-                {['Algorithms', 'Networks', 'AI'].map(t => <span key={t} className="px-2.5 py-0.5 rounded-full bg-[#E0E8F7] text-[#1B2A4A] text-[10px] font-medium border border-[#aec4e8]" style={{
+                {['Software Development', 'IT', 'Programming'].map(t => <span key={t} className="px-2.5 py-0.5 rounded-full bg-[#E0E8F7] text-[#1B2A4A] text-[10px] font-medium border border-[#aec4e8]" style={{
                 fontFamily: "'Inter', sans-serif"
               }}>
                   
@@ -850,20 +809,20 @@ export const Portfolio = () => {
                 fontFamily: "'Playfair Display', serif"
               }}>
                   
-                  Coursera / Online
+                  High School, Tunisia
                 </h3>
                 <span className="text-[#6B7080] text-xs" style={{
                 fontFamily: "'JetBrains Mono', monospace"
               }}>
                   
-                  2022 → 2023
+                  2025
                 </span>
               </div>
               <p className="text-[#7A2A50] font-medium text-sm mb-3">
-                Full-Stack Web Dev Certification
+                Baccalauréat in Mathematics
               </p>
               <div className="flex flex-wrap gap-1.5">
-                {['React', 'Node.js', 'PostgreSQL'].map(t => <span key={t} className="px-2.5 py-0.5 rounded-full bg-[#F1E2EC] text-[#7A2A50] text-[10px] font-medium border border-[#d4a0bc]" style={{
+                {['Mathematics', 'Sciences'].map(t => <span key={t} className="px-2.5 py-0.5 rounded-full bg-[#F1E2EC] text-[#7A2A50] text-[10px] font-medium border border-[#d4a0bc]" style={{
                 fontFamily: "'Inter', sans-serif"
               }}>
                   
@@ -897,7 +856,7 @@ export const Portfolio = () => {
 
         {/* Filter pills */}
         <div className="flex flex-wrap gap-2 mb-6">
-          {['All', 'Languages', 'Frameworks', 'Databases', 'Tools', 'Cloud'].map(f => <button key={f} onClick={() => setActiveFilter(f)} className={cn('px-3 py-1 rounded-full text-xs font-medium transition-all', activeFilter === f ? 'bg-[#7A2A50] text-white' : 'bg-white border border-[#D7DAE6] text-[#181A26] hover:bg-[#F1E2EC]')} style={{
+          {['All', 'Languages', 'Frameworks', 'Databases', 'Tools'].map(f => <button key={f} onClick={() => setActiveFilter(f)} className={cn('px-3 py-1 rounded-full text-xs font-medium transition-all', activeFilter === f ? 'bg-[#7A2A50] text-white' : 'bg-white border border-[#D7DAE6] text-[#181A26] hover:bg-[#F1E2EC]')} style={{
           fontFamily: "'Inter', sans-serif"
         }}>
             
@@ -1034,34 +993,9 @@ export const Portfolio = () => {
         } as React.CSSProperties} />
           
           <div className="flex flex-col md:flex-row">
-            {/* Browser mockup */}
-            <div className="md:w-2/5 h-48 md:h-auto bg-[#181A26] flex-shrink-0">
-              <div className="h-7 bg-[#2A2E3A] flex items-center px-3 gap-1.5 border-b border-[#3A3E4A]">
-                <div className="w-2 h-2 rounded-full bg-[#FF5F56]" />
-                <div className="w-2 h-2 rounded-full bg-[#FFBD2E]" />
-                <div className="w-2 h-2 rounded-full bg-[#27C93F]" />
-                <div className="ml-2 bg-[#3A3E4A] rounded px-2 py-0.5 text-[9px] text-[#6B7080] flex-1 max-w-[140px]" style={{
-                fontFamily: "'JetBrains Mono', monospace"
-              }}>
-                  
-                  localhost:3000
-                </div>
-              </div>
-              <div className="p-3 text-[9px] text-[#6B7080]" style={{
-              fontFamily: "'JetBrains Mono', monospace"
-            }}>
-                
-                <div className="flex gap-2 mb-1 items-center">
-                  <ChevronRight size={10} className="text-[#7A2A50]" />
-                  <span className="text-white">devnotes init</span>
-                </div>
-                <p className="text-[#2F6FB0]">{'> Loading database... [DONE]'}</p>
-                <p>{'> Indexing markdown... [DONE]'}</p>
-                <div className="flex gap-2 mt-1 items-center">
-                  <span className="text-[#B83A6E]">●</span>
-                  <span className="text-white">System Ready</span>
-                </div>
-              </div>
+            {/* Project screenshot */}
+            <div className="md:w-2/5 flex-shrink-0 bg-[#F4F5FA] flex items-center justify-center p-4">
+              <img src="/e-fleur2.jpg" alt="FlowerShop app screenshot" className="max-h-[420px] w-auto max-w-full object-contain" />
             </div>
             {/* Content */}
             <div className="p-6 flex flex-col justify-center">
@@ -1070,7 +1004,7 @@ export const Portfolio = () => {
                 fontFamily: "'Playfair Display', serif"
               }}>
                   
-                  DevNotes
+                  {PROJECTS[0].title}
                 </h3>
                 <span className="flex-shrink-0 px-2 py-0.5 border-2 border-[#7A2A50] text-[#7A2A50] text-[9px] font-bold tracking-widest uppercase font-mono">
                   ★ FEATURED
@@ -1090,22 +1024,20 @@ export const Portfolio = () => {
                     {tag}
                   </span>)}
               </div>
-              <div className="flex gap-4">
-                {PROJECTS[0].links.map(link => <a key={link.label} href={link.url} className="flex items-center gap-1.5 text-xs text-[#7A2A50] hover:text-[#692B56] transition-colors" style={{
-                fontFamily: "'JetBrains Mono', monospace"
-              }}>
-                  
-                    {link.icon === 'source' ? <Code size={13} /> : <ExternalLink size={13} />}
-                    <span>{link.label}</span>
-                  </a>)}
-              </div>
+              <a href="https://github.com/nourbenjemaa94-cmd/Internship-Project" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 self-start px-3 py-2 rounded-md bg-[#7A2A50] text-white text-xs font-medium hover:bg-[#692B56] transition-colors" style={{
+              fontFamily: "'JetBrains Mono', monospace"
+            }}>
+                
+                <Github size={14} />
+                <span>View on GitHub</span>
+              </a>
             </div>
           </div>
         </motion.div>
 
         {/* Regular project cards */}
-        <div className="grid md:grid-cols-2 gap-6">
-          {[PROJECTS[1], PROJECTS[2]].map((project, i) => <motion.div key={project.id} initial={{
+        {PROJECTS.length > 1 && <div className="grid md:grid-cols-2 gap-6">
+          {PROJECTS.slice(1).map((project, i) => <motion.div key={project.id} initial={{
           opacity: 0,
           y: 20
         }} whileInView={{
@@ -1161,7 +1093,7 @@ export const Portfolio = () => {
                   </a>)}
               </div>
             </motion.div>)}
-        </div>
+        </div>}
       </Section>
 
       {/* ── EXPERIENCE ── */}
@@ -1391,16 +1323,22 @@ export const Portfolio = () => {
       {/* Footer */}
       <footer className="bg-[#F4F5FA] border-t border-[#D7DAE6] py-8 flex flex-col items-center gap-4">
         <div className="flex items-center gap-4 text-[#7A2A50]">
-          <Github size={18} className="cursor-pointer hover:scale-110 transition-transform" />
-          <Linkedin size={18} className="cursor-pointer hover:scale-110 transition-transform" />
-          <Mail size={18} className="cursor-pointer hover:scale-110 transition-transform" />
+          <a href="https://github.com/nourbenjemaa94-cmd" target="_blank" rel="noreferrer" aria-label="GitHub" className="hover:scale-110 transition-transform">
+            <Github size={18} />
+          </a>
+          <a href="https://www.linkedin.com/in/nour-ben-jemaa-4692442b4/?skipRedirect=true" target="_blank" rel="noreferrer" aria-label="LinkedIn" className="hover:scale-110 transition-transform">
+            <Linkedin size={18} />
+          </a>
+          <a href="mailto:nourbenjemaa94@gmail.com" aria-label="Email" className="hover:scale-110 transition-transform">
+            <Mail size={18} />
+          </a>
         </div>
         <div className="flex items-center gap-2">
           <span className="text-[#6B7080] text-xs" style={{
           fontFamily: "'JetBrains Mono', monospace"
         }}>
             
-            // built with React + Vite by Nour Ben Jemaa · 2025
+            // built with React + Vite by Nour Ben Jemaa · 2026
           </span>
           <Star size={12} className="text-[#B83A6E] fill-[#B83A6E]" />
         </div>
