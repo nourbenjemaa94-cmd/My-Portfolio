@@ -1,6 +1,13 @@
+import { lazy, Suspense } from 'react';
+import { LazyMotion, domAnimation } from 'framer-motion';
 import { Theme } from './settings/types';
-import { Portfolio } from './components/generated/Portfolio';
-import { AIChatWidget } from './components/generated/AIChatWidget';
+import { Portfolio } from './pages/Portfolio';
+
+const AIChatWidget = lazy(() =>
+  import('./components/chat/AIChatWidget').then(mod => ({
+    default: mod.AIChatWidget,
+  })),
+);
 
 let theme: Theme = 'light';
 
@@ -16,11 +23,13 @@ function App() {
   setTheme(theme);
 
   return (
-    <div>
+    <LazyMotion features={domAnimation} strict>
       <Portfolio />
-      <AIChatWidget />
-    </div>);
-
+      <Suspense fallback={null}>
+        <AIChatWidget />
+      </Suspense>
+    </LazyMotion>
+  );
 }
 
 export default App;

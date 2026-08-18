@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# After deploy, set this to the live origin, e.g. https://example.com/sitemap.xml
+Sitemap: /sitemap.xml

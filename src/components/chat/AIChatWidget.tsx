@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { m, AnimatePresence } from 'framer-motion';
 import { X, ArrowRight } from 'lucide-react';
 
 // ─── Types ────────────────────────────────────────────────────────────────────
@@ -106,7 +106,7 @@ const AvatarCircle = ({
   overflow: 'hidden',
   position: 'relative' as const
 }}>
-  <img src="https://storage.googleapis.com/storage.magicpath.ai/component-assets/420171969561006080/420201423544946688/0600fc785aa8a7d0261aa1b6049876ddecd03b8bbe0f39a7a8365b3153a33c5a.png" alt="Nour chibi avatar" style={{
+  <img src="https://storage.googleapis.com/storage.magicpath.ai/component-assets/420171969561006080/420201423544946688/0600fc785aa8a7d0261aa1b6049876ddecd03b8bbe0f39a7a8365b3153a33c5a.png" alt="Nour chibi avatar" width={80} height={80} loading="lazy" decoding="async" style={{
     width: '130%',
     height: '130%',
     objectFit: 'cover',
@@ -262,7 +262,7 @@ export const AIChatWidget = () => {
       
       {/* Chat Panel */}
       <AnimatePresence>
-        {isOpen && <motion.div key="chat-panel" initial={{
+        {isOpen && <m.div key="chat-panel" initial={{
         opacity: 0,
         scale: 0.85,
         y: 20,
@@ -453,12 +453,12 @@ export const AIChatWidget = () => {
                 <ArrowRight size={15} color="#fff" />
               </button>
             </form>
-          </motion.div>}
+          </m.div>}
       </AnimatePresence>
 
       {/* Speech bubble */}
       <AnimatePresence>
-        {bubbleVisible && !isOpen && <motion.div key="speech-bubble" initial={{
+        {bubbleVisible && !isOpen && <m.div key="speech-bubble" initial={{
         opacity: 0,
         scale: 0.7,
         transformOrigin: 'bottom right'
@@ -515,11 +515,11 @@ export const AIChatWidget = () => {
           borderTop: '6px solid #F4F5FA'
         }} />
           
-          </motion.div>}
+          </m.div>}
       </AnimatePresence>
 
       {/* Floating avatar button */}
-      <motion.button onClick={handleAvatarClick} aria-label={isOpen ? 'Close chat' : 'Open chat with mini-Nour'} animate={{
+      <m.button onClick={handleAvatarClick} aria-label={isOpen ? 'Close chat' : 'Open chat with mini-Nour'} animate={{
       y: [0, -5, 0]
     }} transition={{
       duration: 3,
@@ -539,6 +539,6 @@ export const AIChatWidget = () => {
     }}>
         
         <AvatarCircle size={52} />
-      </motion.button>
+      </m.button>
     </div>;
 };
